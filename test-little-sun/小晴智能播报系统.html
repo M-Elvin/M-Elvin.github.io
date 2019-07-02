@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>小晴晴智能助手</title>
+</head>
+
+<body>
+    <script>
+        var study = [
+            '1.唔赌唔知时运高，唔滚唔知身体好。',
+            '2.一串光阴一串金，再串俾人打镬金。', 
+            '3.拖拖拉拉实食斋，扭扭另另正乸型。',
+            '4.唔系猛龙唔过江，唔系猪扒唔化妆。',
+            '5.眼大无神，鼻大吸尘，口大正衰神。',
+            '6.我唔可以俾到你幸福，但绝对可以俾到你舒服。',
+            '7.拍电影就好似人想去欧洲旅行，一世人总要去一次。',
+            '8.其实不喜欢可以有一百个原因，而那些原因是我不能改变的，故我只能就自己的缺点而改进，然后做些成绩出来，让他们明白我也曾努力过，如果成功的话，也是我应得的。'
+
+        ]
+        var flag = true;
+        while (flag) {
+            var msg = prompt('你好我是智能助手小晴晴~~~\n' +
+                '简单求和请按1\n' +
+                '查询时间请按2\n' +
+                '粤语栋笃笑请按 3\n'+
+                '退出请按 q\n')
+
+            switch (msg) {
+                case "1":
+                    var num = prompt('普通话“你好,我是智能播报员小晴,我的数学贼溜，不信你试试”~~请输入若干个数字 用,连接 例如:1,2,3 ');
+                    var sum = getSum(num)
+                    alert('他们的和为' + sum);
+                    break;
+                case '2':
+                    var time = getDateString()
+                    alert('你好,小晴为你现在报时,依咖系北京时间' + time);
+                    break;
+                case '3':
+                    var index = Math.floor(Math.random() * study.length);
+                    alert(study[index]);
+                    break;
+                case "q":
+                    flag = !confirm('慢走不送');
+                    break;
+                default:
+                    alert('请问你按了什么');
+                    break;
+            }
+        }
+
+        function getDateString() {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            month = month < 10 ? "0" + month : month;
+            var day = date.getDate();
+            day = day < 10 ? "0" + day : day;
+            var hour = date.getHours();
+            hour = hour < 10 ? "0" + hour : hour;
+            var minute = date.getMinutes();
+            minute = minute < 10 ? "0" + minute : minute;
+            var second = date.getSeconds();
+            second = second < 10 ? "0" + second : second;
+            var time = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
+            return time;
+        }
+
+        function getSum(num) {
+            var num2 = num.split(',');
+            var sum = 0;
+            for (var i = 0; i < num2.length; i++) {
+                sum += parseInt(num2[i]);
+            }
+            return sum;
+        }
+    </script>
+</body>
+
+</html>
