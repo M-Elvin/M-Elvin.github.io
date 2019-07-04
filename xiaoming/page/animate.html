@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 247px;
+            width: 246px;
+            margin: 300px auto;
+            /* background-color: #635151; */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: run infinite 6s alternate-reverse linear;
+            /* transform-origin: center center; */
+        }
+        
+        @keyframes run {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="../动画练习/images/fc.png" alt="">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            height: 300px;
+            width: 300px;
+            position: relative;
+            margin: 200px auto;
+            transition: all 5s;
+            transform-style: preserve-3d;
+        }
+        
+        .box:hover {
+            transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+        }
+        
+        .box ul {
+            list-style: none;
+        }
+        
+        .box ul li {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            line-height: 300px;
+            text-align: center;
+            font-size: 50px;
+        }
+        
+        .box ul li:nth-child(1) {
+            transform: translateZ(150px);
+            background-color: #ae8699;
+        }
+        
+        .box ul li:nth-child(2) {
+            transform: translateZ(-50%) rotateY(180deg);
+            background-color: #99ae86;
+        }
+        
+        .box ul li:nth-child(3) {
+            transform: translateX(50%) rotateY(90deg);
+            background-color: #8932e6;
+        }
+        
+        .box ul li:nth-child(4) {
+            transform: translateX(-50%) rotateY(90deg);
+            background-color: rgb(223, 65, 65);
+        }
+        
+        .box ul li:nth-child(5) {
+            transform: translateY(50%) rotateX(90deg);
+            background-color: rgb(38, 156, 235);
+        }
+        
+        .box ul li:nth-child(6) {
+            transform: translateY(-50%) rotateX(90deg);
+            background-color: rgb(248, 227, 39);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li>你是猪</li>
+            <li>靓仔</li>
+            <li>靓女</li>
+            <li>化骨龙</li>
+            <li>地龙</li>
+            <li>琨</li>
+        </ul>
+    </div>
+</body>
+
+</html>
